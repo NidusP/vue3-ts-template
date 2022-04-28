@@ -1,0 +1,25 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true,
+		// setup语法糖环境
+		"vue/setup-compiler-macros": true
+	},
+	"extends": [
+		"eslint:recommended",
+		// "plugin:vue/essential", 使用vue3规则集
+		"plugin:vue/vue3-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	// 解析检查vue文件
+	"parser": "vue-eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"parser": "@typescript-eslint/parser",
+		"sourceType": "module"
+	},
+	"plugins": ["vue", "@typescript-eslint"],
+	"rules": {}
+}
