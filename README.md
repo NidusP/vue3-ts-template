@@ -49,5 +49,6 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 `npx husky install`
 生成.husky
 
-### 自动修复不符合eslint的代码
+### 自动修复不符合 eslint 的代码
+
 `pnpm install lint-staged -D`
