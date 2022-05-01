@@ -52,3 +52,9 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 ### 自动修复不符合 eslint 的代码
 
 `pnpm install lint-staged -D`
+
+### 添加 git hooks 控制代码检查与提交信息
+
+`npm install commitizen -g`
+
+`pnpm install cz-customizable -D`
