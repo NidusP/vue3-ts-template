@@ -15,15 +15,39 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
-
 ## setup vite+vue3 project
+
 ```
 - pnpm create vite
-- pnpm install 
+- pnpm install
+```
+
+### 添加[eslint rules](https://eslint.bootcss.com/docs/rules/)
 
 - pnpm install eslint @eslint/create-config -D
 - npx elint --init
 
-[eslint rules](https://eslint.bootcss.com/docs/rules/)
+- 添加解析 vue 文件能力的配置
 
-```
+1. `"parser": "vue-eslint-parser"`
+
+- 扩展使用 vue3 规则集
+
+2. `extends: "plugin:vue/vue3-recommended" // 替换"plugin:vue/essential"`
+
+- 打开 setup 语法糖环境
+
+3. `env: "vue/setup-compiler-macros":true`
+
+### tianjia
+
+### 提交规范
+
+`pnpm install @commitlint/config-conventional @commitlint/cli -D`
+创建 commitlint.config.js
+`pnpm install husky -D`
+`npx husky install`
+生成.husky
+
+### 自动修复不符合eslint的代码
+`pnpm install lint-staged -D`
