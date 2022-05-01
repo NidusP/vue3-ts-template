@@ -44,17 +44,29 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 ### 提交规范
 
 `pnpm install @commitlint/config-conventional @commitlint/cli -D`
-创建 commitlint.config.js
-`pnpm install husky -D`
-`npx husky install`
-生成.husky
+
+- 创建 commitlint.config.js
+  `pnpm install husky -D`
+- 生成.husky
+  `npx husky install`
+- 提交时进行 commitlint 检查
+  `npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'`
 
 ### 自动修复不符合 eslint 的代码
 
 `pnpm install lint-staged -D`
 
+- 生成脚本在提交前对暂存区代码进行校验
+- package.json 中配置检查任务
+  `npx husky add .husky/pre-commit "npx --no-install lint-staged"`
+
 ### 添加 git hooks 控制代码检查与提交信息
 
-`npm install commitizen -g`
+- commitizen 规范化提交代码
+  `npm install commitizen -g`
+  `pnpm install cz-customizable -D`
+  `git cz`
 
-`pnpm install cz-customizable -D`
+### support jsx/tsx
+
+`pnpm install @vitejs/plugin-vue-jsx -D`
